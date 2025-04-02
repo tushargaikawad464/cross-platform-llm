@@ -1,0 +1,17 @@
+  # tools.yaml
+version: 1.1
+tools:
+  - name: get_weather
+    type: function
+    description: Get current temperature for a given location.
+    parameters:
+      location:
+        type: string
+        description: The city and state, e.g. San Francisco, CA.
+      unit:
+        type: string
+        enum: [celsius, fahrenheit]
+        description: The unit of temperature to return.
+    required:
+      - location
+      - unit
